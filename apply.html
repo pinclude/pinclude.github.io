@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<!--
+	Spatial by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+			<link rel="stylesheet" href="css/custom.css" />
+	<head>
+		<title>Apply - PROJECT &lt;include&gt;</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script>
+			$(document).ready(function() {
+				
+				$.fn.serializeObject = function()
+				{
+				    var o = {};
+				    var a = this.serializeArray();
+				    $.each(a, function() {
+				        if (o[this.name] !== undefined) {
+				            if (!o[this.name].push) {
+				                o[this.name] = [o[this.name]];
+				            }
+				            o[this.name].push(this.value || '');
+				        } else {
+				            o[this.name] = this.value || '';
+				        }
+				    });
+				    return o;
+				};
+				
+				$(".button").click(function(){
+					alert(JSON.stringify($('form').serializeObject()));
+				})
+				
+			});
+			</script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Sofia' rel='stylesheet' type='text/css'>
+		</noscript>
+	</head>
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+<nav id="nav">
+	  <ul>
+						<li><a href="index.html">Home</a></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Banner -->
+			<section id="banner">
+<div class='login'>
+<form action="" method="post">
+  <h2>Apply</h2>
+  <input name='name' placeholder='Name' type='text'>
+  <input name='email' placeholder='E-Mail Address' type='text'>
+  <input name='year' placeholder='Year of Study' type='text'>
+  <input name='program' placeholder='Discipline / Program' type='text'>
+  <textarea name="describe" placeholder='Describe Yourself in 3 Words'cols="40" rows="2" ... ></textarea>
+  <textarea name="exp" placeholder='Tell us about your coding experience and familiarity with specific languages (use a 1-5 scale)'cols="40" rows="5" ... ></textarea>
+  <textarea name="chal" placeholder='What challenges do you think will be present when teaching?'cols="40" rows="5" ... ></textarea>
+  <textarea name="summer" placeholder="What's your availability during the summer?" rows="4" ... ></textarea>
+
+
+  <input type='submit' value='APPLY' class="button special big">
+</form>
+</div>
+			</section>
+
+			<!-- One -->
+			<!-- Two -->
+			<!-- Three -->
+			<!-- Four -->
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-facebook"></a></li>
+						<li><a href="#" class="icon fa-twitter"></a></li>
+						<li><a href="#" class="icon fa-instagram"></a></li>
+					</ul>
+					<ul class="copyright">
+					  <li>&copy; Project Include 2016</li>
+					<li>Template: <a href="http://templated.co">TEMPLATED</a></li>
+					<li>Image: <a href="http://unsplash.com">Unsplash</a></li>
+					<li>Website: <a href="http://rzyc.me">Richard Chen</a></li>
+					</ul>
+				</div>
+			</footer>
+
+	</body>
+</html>
