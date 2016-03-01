@@ -9,7 +9,42 @@ h2 {
 }
 */
 
-#resumeText{
+.emailHeads{
+	font-size: 1.5em;
+	color: #fff !important;
+	opacity: 1 !important;
+	position: absolute;
+/* 	display: inline-block; */
+	float:left;
+	margin-top: 5px;
+}
+
+.gene{
+	position: absolute;
+	margin-left: 15%;
+	font-size: 1em;
+	color: #000 !important;
+	background: rgba(255, 255, 255, 0.72);
+    opacity: 0.7;
+    border-radius: 5px;
+    border-radius: 25px;
+    padding: 10px;
+    width: 85% !important;
+}
+
+.generatedEmail{
+	position: absolute;
+	margin-left: -50%;
+/* 	background: #252525; */
+	width: 200%;
+    border-radius: 25px;
+/*     border: 2px solid #73AD21; */
+/*     padding: 20px;  */
+/*     opacity: 0.4; */
+	background: transparent;
+}
+
+.resumeText{
 			width: 200%;
 			margin-left: -50%;
 			color: #aaa;
@@ -47,7 +82,7 @@ h2 {
 }
 
 #banner {
-	height: 1550px !important;
+	height: 2000px !important;
 }
 
 body {
@@ -78,7 +113,7 @@ a {
   position: absolute;
   top: 10%;
   left: 50%;
-  margin-top: -60px;
+  margin-top: -160px;
   margin-left: -175px;
 }
 

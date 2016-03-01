@@ -89,14 +89,19 @@
 					return false;
 					}
 					
+/*
 					if(confirm("When you press 'OK', a new e-mail message will open with the recipient, subject, and body already filled in. Attach your resume and hit send. Alternatively, copy all of the answers over to an e-mail and send it to us with your resume. ")){
 					
-					var filledForm = "Remember to attach your resume!   " + JSON.stringify($('form').serializeObject());
-					var email = 'richardchen.1996@outlook.com';
+*/
+					var filledForm = JSON.stringify($('form').serializeObject());
+// 					var email = 'richardchen.1996@outlook.com';
 				    var subject = 'Application - ' + $("#name").val();
-				    window.location = 'mailto:' + email + '?subject=' + subject + '&body=' + filledForm;
-				  }
-					alert("Your application is complete once you send the generated e-mail! You can press the 'APPLY' button again to regenerate the e-mail.")
+				    $(".geneSubj").text(subject);
+				    $(".geneBody").text(filledForm);
+				    newHref = 'mailto:' + email + '?subject=' + subject + '&body=' + filledForm;
+				    $("#emailLink").attr("href", newHref)
+// 				  }
+// 					alert("Your application is complete once you send the generated e-mail! You can press the 'APPLY' button again to regenerate the e-mail.")
 					return false;
 				})
 				
@@ -129,8 +134,7 @@
 <form action="" method="post">
   <h2>Apply</h2>
   
-  <div id="resumeText">This form will automatically generate an e-mail to send to us. You will need to attach your resume to that e-mail.
-  Alternatively, you can send us an e-mail with answers for the questions below yourself at <a href="mailto:include.skule@gmail.com">include.skule@gmail.com</a></div>
+  <div class="resumeText">This form will automatically generate an e-mail to send to us. You will need to attach your resume to that e-mail.</div>
   
   <input name='name' id='name' placeholder='Name' type='text'>
   <input name='email' id='email' placeholder='E-Mail Address' type='text'>
@@ -142,8 +146,18 @@
   <textarea name="summer" id="summer" placeholder="What's your availability during the summer?" rows="4" ... ></textarea>
 
 
-  <input type='submit' value='APPLY' class="button special big">
+  <input type='submit' value='GENERATE' class="button special big">
 </form>
+
+<div class="resumeText">Send the following e-mail, with your resume, to <a href="mailto:include.skule@gmail.com" id="emailLink">include.skule@gmail.com</a><br></div>
+
+<div class="generatedEmail">
+	<div class="emailHeads">Subject:</div>
+	<textarea class="geneSubj gene" cols="85" rows="1"></textarea><br><br><br><br>
+	<div class="emailHeads">Body:</div>
+	<textarea class="geneBody gene" cols="40" rows="10"></textarea>
+</div>
+
 </div>
 			</section>
 
