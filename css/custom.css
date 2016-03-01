@@ -8,6 +8,15 @@ h2 {
 	font-family: Gotham !important;
 }
 */
+
+#resumeText{
+			width: 200%;
+			margin-left: -50%;
+			color: #aaa;
+			font-size: 1.5em;
+			margin-bottom: 1.75em;
+}
+
 	body {
 		background: #fff;
 	}
@@ -38,7 +47,7 @@ h2 {
 }
 
 #banner {
-	height: 1350px !important;
+	height: 1550px !important;
 }
 
 body {

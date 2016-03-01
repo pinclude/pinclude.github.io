@@ -37,7 +37,14 @@
 				};
 				
 				$(".button").click(function(){
-					alert(JSON.stringify($('form').serializeObject()));
+					$.ajax({
+					    type: 'POST',
+					    url: 'http://toastedsesa.me/projincl/api/v1.0',
+					    data: JSON.stringify($('form').serializeObject()), // or JSON.stringify ({name: 'jonas'}),
+					    success: function() { alert("Thank you for applying! Don't forget to e-mail your resume as well!"); },
+					    contentType: "application/json",
+					    dataType: 'json'
+					});
 				})
 				
 			});
@@ -68,6 +75,10 @@
 <div class='login'>
 <form action="" method="post">
   <h2>Apply</h2>
+  
+  <div id="resumeText"> Make sure that you also e-mail your resume to <a href="mailto:include.skule@gmail.com">include.skule@gmail.com</a>!<br />
+	  Include your full name and use the e-mail you enter below, so we know it's you.</div>
+  
   <input name='name' placeholder='Name' type='text'>
   <input name='email' placeholder='E-Mail Address' type='text'>
   <input name='year' placeholder='Year of Study' type='text'>
